@@ -1,0 +1,25 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Reference</th>
+        <th scope="col">Date</th>
+        <th scope="col">Edit</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders;let element=index;">
+
+        <td>{{order.id_order}}</td>
+
+        <td>{{order.reference}}</td>
+        <td>{{order.date}}</td>
+        <td><a class="plus"  target="_blank"
+        ><button (click)="deleteOrder(order.id_order)"class="btn btn-primary">Delete</button></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

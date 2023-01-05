@@ -1,0 +1,36 @@
+<div>
+  <a class="plus" routerLink="/addarticles" target="_self"><button class="plus">Add Article</button></a>
+</div>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let article of articles;">
+      <form name="rgForm" (ngSubmit)="addOrder(article)">
+        <div class="card">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top"
+            alt="Hollywood Sign on The Hill" />
+          <div class="card-body">
+            <h5 class="card-title">{{article.name}}</h5>
+            <p class="card-text">
+              {{article.price}}
+            </p>
+            <button type="submit" class="btn btn-primary">Add Order</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+  .plus {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 10px;
+    bottom: 14px;
+    border-radius: 50%;
+    z-index: 200;
+    background: dark;
+  }
+</style>

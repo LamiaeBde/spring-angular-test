@@ -1,0 +1,16 @@
+<div class="container">
+  <form name="rgForm" (ngSubmit)="addArticle()">
+    <div class="mb-3 mt-3">
+      <input class="form-control" [(ngModel)]="article.name" placeholder="Article name" name="name" />
+    </div>
+    <div class="mb-3 mt-3">
+      <input class="form-control" [(ngModel)]="article.price" placeholder="Price" name="prix" />
+    </div>
+    <div class="mb-3 mt-3">
+     <!-- <input type="file" class="form-control" [(ngModel)]="article.picture" placeholder="Picture" name="picture" />-->
+      <input type="file" accept="image/*"   [(ngModel)]="article.picture"   class="form-control"  placeholder="Picture" name="picture"/>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+</div>

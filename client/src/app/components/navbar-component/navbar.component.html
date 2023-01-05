@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link active" aria-current="page" routerLink="/articles"
+            >Articles</a
+          >
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/orders">Orders</a>
+          <span class="badge badge-danger navbar-badge"></span>
+        </li>
+      </ul>
+      <button class="btn btn-outline-success" type="submit">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar-badge {
+    font-size: 0.6rem;
+    font-weight: 300;
+    /* padding: 2px 4px; */
+    position: absolute;
+    right: 88%;
+    top: 20px;
+  }
+  .badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+  }
+
+  .plus {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 10px;
+    bottom: 14px;
+    border-radius: 50%;
+    z-index: 200;
+    background: green;
+  }
+</style>
